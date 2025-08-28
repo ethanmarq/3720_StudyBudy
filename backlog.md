@@ -1,43 +1,53 @@
-User Profile Management
+# Backlog
 
-    Story 1 (High Priority): As a Clemson student, I want to create a profile and list my courses, so that others can find me for study sessions.
+---
 
-        Acceptance Criteria:
+## Story one
+Story 1 (High Priority): As a Clemson student, I want to create a profile and list my courses, so that others can find me for study sessions.
 
-            Given I'm a new user, I can sign up with my name and Clemson email.
+### Acceptance Criteria:
 
-            Given I have a profile, I can add courses by course code (e.g., CPSC 3720).
+Given I'm a new user, I can sign up with my name and Clemson email.
 
-            Given I have added courses, they are saved and visible on my profile.
+Given I have a profile, I can add courses by course code (e.g., CPSC 3720).
 
-Scheduling & Availability
+Given I have added courses, they are saved and visible on my profile.
 
-    Story 2 (High Priority): As a student, I want to set my weekly availability, so that the app knows when I am free to study.
+---
 
-        Acceptance Criteria:
+## Story two
+Story 2 (High Priority): As a student, I want to set my weekly availability, so that the app knows when I am free to study.
 
-            Given I am logged in, I can view a weekly calendar (e.g., Monday-Sunday).
+### Acceptance Criteria:
 
-            Given I view the calendar, I can select and save time blocks when I am available.
+Given I am logged in, I can view a weekly calendar (e.g., Monday-Sunday).
 
-            Given my availability is saved, it can be used for matching.
+Given I view the calendar, I can select and save time blocks when I am available.
 
-    Story 3 (Medium Priority): As a student, I want to search for classmates enrolled in the same course, so that I can initiate a study session.
+Given my availability is saved, it can be used for matching.
 
-        Acceptance Criteria:
+---
 
-            Given I am on the search page, I can select one of my courses.
+## Story three
+Story 3 (Medium Priority): As a student, I want to search for classmates enrolled in the same course, so that I can initiate a study session.
 
-            Given I select a course, the app displays a list of other students in that course.
+###Acceptance Criteria:
 
-            Given a list of students is shown, I can view their available times.
+Given I am on the search page, I can select one of my courses.
 
-    Story 4 (Medium Priority): As a student, I want to propose and confirm a study session with a classmate, so that we can formalize a meeting.
+Given I select a course, the app displays a list of other students in that course.
 
-        Acceptance Criteria:
+Given a list of students is shown, I can view their available times.
 
-            Given I have found a classmate, I can send them a study session request with a proposed time.
+---
 
-            Given I receive a request, I can either accept or decline it.
+## Story four
+Story 4 (Medium Priority): As a student, I want to propose and confirm a study session with a classmate, so that we can formalize a meeting.
 
-            Given a request is accepted, it is confirmed and appears on both students' schedules.
+### Acceptance Criteria:
+
+Given I have found a classmate, I can send them a study session request with a proposed time.
+
+Given I receive a request, I can either accept or decline it.
+
+Given a request is accepted, it is confirmed and appears on both students' schedules .
