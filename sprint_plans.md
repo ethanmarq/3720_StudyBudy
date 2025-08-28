@@ -1,3 +1,5 @@
+# Sprint Logs 
+
 ## Sprint One
 Sprint Goal:
 A user can create a profile and add their course

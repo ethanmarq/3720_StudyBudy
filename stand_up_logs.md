@@ -1,6 +1,45 @@
-# Iterations – Agile (Scrum-Style)
+# Stand Up Logs
 
-This document outlines the three planned 1-day sprints for the **Study Buddy Scheduling App**. Each sprint includes planned features, implementation details, testing steps, and example stand-up logs.
+## Sprint One
+Date: 
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+
+## Sprint Two
+Date: 
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+
+## Sprint Three
+Date: 
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+
 
 ---
 
@@ -85,44 +124,5 @@ At the end of each sprint, the team reflected on outcomes:
 
 
 ---
-
-## Sprint One
-Date: 
-Team Member: 
-Yesterday's Work:
-Today's Plan:
-Blockers:
-
-Team Member: 
-Yesterday's Work:
-Today's Plan:
-Blockers:
-
-
-## Sprint Two
-Date: 
-Team Member: 
-Yesterday's Work:
-Today's Plan:
-Blockers:
-
-Team Member: 
-Yesterday's Work:
-Today's Plan:
-Blockers:
-
-
-## Sprint Three
-Date: 
-Team Member: 
-Yesterday's Work:
-Today's Plan:
-Blockers:
-
-
-Team Member: 
-Yesterday's Work:
-Today's Plan:
-Blockers:
 
 
