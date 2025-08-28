@@ -82,3 +82,47 @@ At the end of each sprint, the team reflected on outcomes:
 
 - **Sprint 3 Review**  
   Meeting confirmation implemented and integrated with existing features. Minor UI formatting issues resolved during polish phase.  
+
+
+---
+
+## Sprint One
+Date: 
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+
+## Sprint Two
+Date: 
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+
+## Sprint Three
+Date: 
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+
+Team Member: 
+Yesterday's Work:
+Today's Plan:
+Blockers:
+
+
