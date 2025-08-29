@@ -26,6 +26,11 @@ Python 3.10+ recommended. No external dependencies.
 
 Commands:
 
+Help:
+```
+python -m studybuddy.cli --help
+```
+
 Create user:
 ```
 python -m studybuddy.cli create-user --name "Alice" --email alice@clemson.edu
@@ -53,4 +58,25 @@ Sprint 1 Scope Implemented:
 - Add course(s) with normalization and duplicate prevention
 - Basic CLI for required actions
 - Unit tests covering success and validation paths
+
+## Availability (Story 2 CLI)
+
+Add availability slot:
+```
+python -m studybuddy.cli add-availability --email alice@clemson.edu --day Mon --start 13:00 --end 15:00
+```
+
+List availability:
+```
+python -m studybuddy.cli list-availability --email alice@clemson.edu
+```
+
+Remove a slot by index (see list output):
+```
+python -m studybuddy.cli remove-availability --email alice@clemson.edu --index 1
+```
+
+Notes:
+- Overlapping or adjacent slots on the same day are automatically merged.
+- Time format is 24h HH:MM. Days accepted: Mon Tue Wed Thu Fri Sat Sun.
 
