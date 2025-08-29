@@ -1,10 +1,10 @@
 # Retrospective Notes
 
 ## Sprint One
-Date:
-What went well:
+Date: 8/29/2025
+What went well: 
 What could be improved:
-Action items for next sprint:
+Action items for next sprint: 
 
 ## Sprint Two
 Date:
