@@ -1,0 +1,15 @@
+{
+  "sessions": [
+    {
+      "id": 1,
+      "requester": "alice@clemson.edu",
+      "invitee": "bob@clemson.edu",
+      "course": "CPSC 3720",
+      "day": "WED",
+      "start": "14:30",
+      "end": "15:00",
+      "status": "accepted",
+      "message": "Quick sync"
+    }
+  ]
+}

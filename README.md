@@ -86,3 +86,50 @@ Notes:
 - Time input accepts either 24h (13:30) or 12h with am/pm (1:30pm, 9am). Internally stored in 24h; displayed in 12h in the week view.
 - Days accepted: Mon Tue Wed Thu Fri Sat Sun.
 
+## Classmate Search (Story 3 CLI)
+
+List classmates (same course):
+```
+python -m studybuddy.cli search-classmates --email alice@clemson.edu --course "CPSC 3720"
+```
+
+List classmates with their weekly availability (only days with availability shown):
+```
+python -m studybuddy.cli search-classmates-availability --email alice@clemson.edu --course "CPSC 3720"
+```
+
+Show overlap (common availability windows) with classmates (sorted by total minutes):
+```
+python -m studybuddy.cli search-overlap --email alice@clemson.edu --course "CPSC 3720"
+```
+
+Output shows classmates excluding the requesting user. Availability is aggregated (merged) per day.
+
+## Study Session Requests (Story 4 CLI)
+
+Propose a session (must be within both users' availability and shared course):
+```
+python -m studybuddy.cli propose-session --from alice@clemson.edu --to bob@clemson.edu --course "CPSC 3720" --day Wed --start 2:30pm --end 3:30pm --message "Review chapter 5"
+```
+
+List pending requests (incoming & outgoing):
+```
+python -m studybuddy.cli list-requests --email bob@clemson.edu
+```
+
+Respond to a request (invitee only):
+```
+python -m studybuddy.cli respond-session --email bob@clemson.edu --id 1 --action accept
+```
+
+List confirmed sessions:
+```
+python -m studybuddy.cli list-sessions --email alice@clemson.edu
+```
+
+Rules:
+- Both students must exist and share the course.
+- Proposed time must be fully inside each participant's availability window for that day.
+- Only invitee can accept/decline.
+- Accepted sessions appear for both participants via list-sessions.
+

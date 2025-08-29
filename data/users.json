@@ -16,6 +16,25 @@
           "day": "TUE",
           "start": "09:00",
           "end": "11:30"
+        },
+        {
+          "day": "WED",
+          "start": "14:30",
+          "end": "17:00"
+        }
+      ]
+    },
+    {
+      "name": "Bob Builder",
+      "email": "bob@clemson.edu",
+      "courses": [
+        "CPSC 3720"
+      ],
+      "availability": [
+        {
+          "day": "WED",
+          "start": "14:00",
+          "end": "16:00"
         }
       ]
     }
