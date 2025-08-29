@@ -5,6 +5,7 @@ import sys
 from typing import Callable
 
 from .profile_service import ProfileService, ValidationError
+from .availability_service import AvailabilityService
 
 
 def _handle_errors(func: Callable[[], int]) -> int:
@@ -40,8 +41,37 @@ def cmd_show_profile(args) -> int:
     return 0
 
 
+def cmd_add_availability(args) -> int:
+    svc = AvailabilityService()
+    slots = svc.add_slot(email=args.email, day=args.day, start=args.start, end=args.end)
+    _print_slots(slots)
+    return 0
+
+
+def cmd_list_availability(args) -> int:
+    svc = AvailabilityService()
+    slots = svc.list_slots(email=args.email)
+    _print_slots(slots)
+    return 0
+
+
+def cmd_remove_availability(args) -> int:
+    svc = AvailabilityService()
+    slots = svc.remove_slot(email=args.email, index=args.index)
+    _print_slots(slots)
+    return 0
+
+
+def _print_slots(slots):  # minimal formatting
+    if not slots:
+        print("No availability set")
+        return
+    for i, s in enumerate(slots, start=1):
+        print(f"{i}. {s.day} {s.start}-{s.end}")
+
+
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(description="StudyBuddy CLI - Sprint 1")
+    p = argparse.ArgumentParser(description="StudyBuddy CLI - Sprint 1 + Availability")
     sub = p.add_subparsers(dest="command", required=True)
 
     c1 = sub.add_parser("create-user", help="Create a new user profile")
@@ -57,6 +87,23 @@ def build_parser() -> argparse.ArgumentParser:
     c3 = sub.add_parser("show-profile", help="Show profile by email")
     c3.add_argument("--email", required=True)
     c3.set_defaults(func=cmd_show_profile)
+
+    # Availability commands (Story 2)
+    a1 = sub.add_parser("add-availability", help="Add availability slot: day start end")
+    a1.add_argument("--email", required=True)
+    a1.add_argument("--day", required=True, help="Mon Tue Wed Thu Fri Sat Sun")
+    a1.add_argument("--start", required=True, help="Start time HH:MM 24h")
+    a1.add_argument("--end", required=True, help="End time HH:MM 24h")
+    a1.set_defaults(func=cmd_add_availability)
+
+    a2 = sub.add_parser("list-availability", help="List availability slots with indices")
+    a2.add_argument("--email", required=True)
+    a2.set_defaults(func=cmd_list_availability)
+
+    a3 = sub.add_parser("remove-availability", help="Remove availability slot by index (see list-availability)")
+    a3.add_argument("--email", required=True)
+    a3.add_argument("--index", type=int, required=True)
+    a3.set_defaults(func=cmd_remove_availability)
 
     return p
 

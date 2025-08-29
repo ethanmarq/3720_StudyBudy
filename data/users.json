@@ -5,7 +5,8 @@
       "email": "alice@clemson.edu",
       "courses": [
         "CPSC 3720"
-      ]
+      ],
+      "availability": []
     }
   ]
 }
