@@ -36,4 +36,8 @@ Story 3, 4
 
 Tasks:
 
-
+Implement course classmate search (exclude requester)
+Show classmates availability + overlap windows (with total shared minutes)
+Propose study sessions within mutual availability & shared course
+Session lifecycle: list incoming/outgoing, accept or decline, list confirmed
+Persist sessions (JSON) & integrate services into CLI

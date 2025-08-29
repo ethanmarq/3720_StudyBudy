@@ -31,9 +31,5 @@ Current Plan: Write test cases for sprint three which include user stories for t
 Blockers: None
 
 Team Member: Michael
-Current Plan: Write functionality for user stories three and four.
+Current Plan: Implemented classmate search, availability overlap, session propose/respond, confirmed sessions listing.
 Blockers: None
-
-
-
-

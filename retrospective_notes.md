@@ -30,7 +30,12 @@ Work on user stories three and four which include listing user courses and when 
 Date: 8/29/2025
 
 What went well:
+Implemented classmate search, availability display, overlap calculation, and session proposal/acceptance in modular services. Overlap logic correctly merges and ranks by total shared minutes. Session workflow (propose, list, respond, confirm) worked first pass in manual smoke tests. CLI remained consistent with earlier commands.
 
 
 What could be improved:
+Earlier alignment on naming / command verbs (e.g., list-requests vs list-sessions) to stay fully consistent. Additional validation for overlapping pending sessions or double booking could be added. More negative-path tests still needed for session edge cases.
+
+Action items for future (post-project):
+Add double-booking prevention, cancellation command, and optional duration auto-suggestion from overlap windows. Improve formatting (table style) for large availability outputs. Add persistence layer abstraction for easier future database swap.
 
