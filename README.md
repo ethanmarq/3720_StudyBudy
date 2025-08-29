@@ -1,6 +1,10 @@
 # 3720_StudyBudy
 
-### Deliverables
+---
+
+## Deliverables (All in Github) 
+
+### Process Artifacts
 #### backlog.md: 
 - contain user stories and acceptance criteria
 
@@ -19,6 +23,18 @@
 - What went well
 - What could be improved
 - Actions for next sprint
+
+### AI Transcript 
+marquez_ethan_ai_transcript.txt
+TEMP_michael_ai_transcript.txt
+
+### AI Usage Report
+TEMP_useage_report.pdf
+
+### Reflection Report
+TEMP_reflection_report.pdf
+
+---
 
 ## Running the Sprint 1 CLI (Profiles & Courses)
 
