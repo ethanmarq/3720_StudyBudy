@@ -19,10 +19,11 @@ Date: 8/29/2025
 What went well:
 Added help menu, added week calender, availability shows under week days, and saves in the json databse
 
-What could be improved: streamlining the process to handle other users availability to request, accept, decline study times. 
+What could be improved: 
+Process to handle other users availability to request, accept, decline study times. 
 
 Action items for next sprint: 
-Work on user stories three and four which include listing user courses and when one is selected it will display other users aviability when it is selected. Sending study requests for available times listed by other students, accepting and declining study requests,  
+Work on user stories three and four which include listing user courses and when one is selected it will display other users aviability when it is selected. Sending study requests for available times listed by other students, accepting and declining study requests, listing scheduled times.  
 
 
 ## Sprint Three

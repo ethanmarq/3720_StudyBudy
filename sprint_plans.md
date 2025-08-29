@@ -29,9 +29,11 @@ Remove availability from the week calender
 
 # Sprint Three
 Sprint Goals:
+Functionality and tests for showing all students availability under specified courses. Send classmates with availability study requests, allow to accept and decline study requests, list schedules for accepted study requests. 
 
 Stories:
 Story 3, 4
 
 Tasks:
+
 
