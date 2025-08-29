@@ -9,7 +9,7 @@ Blockers: None Yet
 
 Team Member: Michael 
 Last Stand Up's Work: User Stories in backlog.md, examples for Standup Logs
-Current Plan: Implement Features from Story One into a command line enviroment.
+Current Plan: Implement Features from Story One into a command line enviroment. Added tests for Story One.
 Blockers: None Yet
 
 
