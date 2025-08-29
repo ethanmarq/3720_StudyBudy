@@ -1,0 +1,436 @@
+(In Class Thursday) Comparing Agile and Waterfall Development Processes with AI Assistance
+Due Sunday by 11:59pm Points 100
+Assignment: Comparing Agile and Waterfall Development Processes with AI Assistance
+Overview
+In this assignment, students will gain hands-on experience applying two different software development processes — Agile (Scrum-inspired) and Waterfall — while developing the same small-scale software system. To enrich the experience, students will also use ChatGPT (or a similar AI assistant) as a simulated project assistant for requirements gathering, design, coding support, and testing.
+
+At the end, each group will present their software, process artifacts, and reflections on how the chosen methodology influenced the outcome.
+
+Project Theme
+A “Study Buddy” scheduling app for Clemson students:
+
+Students can create a profile with courses they are enrolled in.
+
+They can search for and schedule study sessions with classmates.
+
+Features: add/remove availability, suggest matches, and confirm meetings.
+
+Implementation: A command-line or web app in a chosen programming language
+
+Process Requirements
+Group A: Waterfall
+Requirements Phase:
+
+Use ChatGPT to help write a formal Software Requirements Specification (SRS).
+
+No changes allowed after approval.
+
+Design Phase:
+
+Use ChatGPT to create UML diagrams, pseudocode, or architectural sketches.
+
+Implementation Phase:
+
+Write the full system in one pass, strictly based on the design.
+
+Testing Phase:
+
+Develop and execute test cases at the very end.
+
+Group B: Agile (Scrum-style)
+Sprint Planning:
+
+Use ChatGPT to help write user stories and acceptance criteria.
+
+Maintain a product backlog.
+
+Iterations (3 X 1 day sprints):
+
+Implement a subset of features each sprint.
+
+Test continuously.
+
+Keep a short daily stand-up log (progress, blockers, next steps).
+
+Review & Retrospective:
+
+Adjust backlog after each sprint.
+
+AI Use
+Students must use ChatGPT for at least three distinct tasks (e.g., requirements drafting, generating test cases, refactoring code).
+
+They must critically evaluate outputs (not just copy-paste).
+
+Document all interactions with ChatGPT (screenshots, transcripts, or summaries).
+
+Deliverables
+Codebase (functional program) in github with a 2-3 minute video walk through of function and features
+
+Process Artifacts
+
+Waterfall: SRS, design docs (UML/pseudocode), test plan & results
+
+Agile: backlog, user stories, sprint plans, stand-up logs, retrospective notes
+
+AI Usage Report (1 page): Describe how ChatGPT was used, what was helpful, what required correction.
+
+Reflection Report (1-2 pages, team-authored):
+
+Strengths & weaknesses of the process used
+
+Comparison of actual vs. expected outcomes
+
+How ChatGPT influenced requirements, design, coding, and testing
+
+Grading Rubric (100 points)
+Category	Criteria	Points
+Process Artifacts	Completeness, clarity, and adherence to process (Waterfall: SRS/design/test plan; Agile: backlog, stories, sprints, retrospectives)	25
+Working Software	Functional, implements core features, meets requirements/user stories, clean code practices	20
+AI Usage Report	Clear documentation of how ChatGPT was used, critical evaluation of AI outputs, thoughtful reflection on strengths/limitations	15
+Reflection Report	Depth of analysis, ability to compare process theory vs. practice, lessons learned, clarity of writing	20
+Presentation/Demo	Professionalism, clarity of communication, effective demonstration of process & product	10
+Team Collaboration	Evidence of balanced participation, organization, and timely deliverables (peer/self-assessment factored in)	10
+Total		100
+Learning Outcomes
+By the end of this assignment, students will be able to:
+
+Apply Agile and Waterfall processes to the same software problem.
+
+Understand trade-offs in adaptability, documentation, and delivery speed.
+
+Critically assess the role of AI tools in software engineering practice.
+
+Improve teamwork, documentation, and presentation skills.
+
+
+can you make sprint 1 right now which is following story 1 
+
+i want this to be a command line project there doesnt need to be any ui or whatever, do this with python and make everything modular because another teammate is working on this with me, have decent documentation (not a lot) and comments ONLY where needed. also after each sprint you need to make tests so do that as well
+
+
+
+Gathering existing markdown artifact contents to update backlog and sprint plan for Sprint 1 and then create code structure.
+
+Read backlog.md
+
+Read sprint_plans.md
+
+Read stand_up_logs.md
+
+Read retrospective_notes.md
+
+Read README.md
+
+Adding Python module structure, implementing Sprint 1 (Story 1) functionality (profile creation & course management), updating README, and creating tests.
+
+__init__.py
+models.py
+storage.py
+profile_service.py
+cli.py
+test_profile.py
+README.md
+
+sprint_plans.md+5-0
+Running tests to validate Sprint 1 implementation.
+
+GitHub Copilot
+
+Sprint 1 (Story 1) code, CLI, and tests added; tests executed (no failures reported).
+
+Summary of Deliverables now in repo:
+
+Modular package studybuddy with models, storage, service layer, and CLI.
+Features: create profile (Clemson email validation), add normalized courses (duplicate-safe), show profile.
+JSON persistence (data/users.json).
+Tests in test_profile.py (profile creation, validation errors, course normalization, duplicates).
+Updated sprint_plans.md with expanded tasks.
+README updated with usage and test instructions.
+Next suggestions (optional for later sprints):
+
+Input loop / interactive mode.
+Logging for audit of operations (useful for AI usage report).
+Add availability model early (prep for Story 2).
+Expand tests to include persistence round-trip.
+Let me know when you want to start Sprint 2 (availability) or need the AI usage / stand-up log entries filled.
+
+can i run this project now? is it working?
+
+Running a quick CLI smoke test (help, create user, add course, show profile) to confirm project works.
+
+reminder that we are using an agile plan
+
+Running a quick CLI smoke test (help, create user, add course, show profile) plus tests to confirm project works for Sprint 1.
+
+python -m studybuddy.cli --help
+python -m studybuddy.cli create-user --name "Alice Smith" --email alice@clemson.edu
+python -m studybuddy.cli add-course --email alice@clemson.edu --course CPSC3720
+python -m studybuddy.cli show-profile --email alice@clemson.edu
+python -m pytest -q
+
+GitHub Copilot
+
+Yes, it's runnable and working for Sprint 1.
+
+Validated just now:
+
+CLI help displayed correctly.
+Created user: alice@clemson.edu.
+Added course CPSC3720 -> stored as normalized CPSC 3720.
+Viewed profile showing name, email, and course.
+Test suite run (all passed; no failures output).
+How to run yourself (PowerShell):
+
+Create a user: python -m studybuddy.cli create-user --name "Alice Smith" --email alice@clemson.edu
+
+Add a course: python -m studybuddy.cli add-course --email alice@clemson.edu --course CPSC3720
+
+Show the profile: python -m studybuddy.cli show-profile --email alice@clemson.edu
+
+Run tests: python -m pytest -q
+
+Agile note: Sprint 1 (Story 1) increment delivered: profile + course management with tests and documentation. Ready for backlog refinement and Sprint 2 planning (availability feature).
+
+Let me know when you want to:
+
+Add availability model (Story 2)
+Flesh out stand-up log entry for today
+Capture AI usage notes for Sprint 1
+Next action? Just ask.
+
+can you now do the second story. again make sure that you make everything modular like the previous story. also don't make any tests, for this sprint, my teammate is doing that for this one. also don't edit any of the .md files, that is also up to my friend to do. however you can add things to the readme.md if necessary.
+
+Reading current README to ensure we merge availability instructions without overwriting manual edits.
+
+Read README.md
+
+Searching codebase to plan availability feature integration points.
+
+Implementing Story 2 (weekly availability) by adding models, service, CLI commands, and README usage notes without touching other markdown files or adding tests.
+
+models.py
+availability_service.py
+cli.py
+__init__.py
+README.md+21-0
+Running a quick manual CLI smoke test for availability commands.
+
+python -m studybuddy.cli add-availability --email alice@clemson.edu --day Mon --start 13:00 --end 15:00
+
+Fixing ordering issue in cli.py by moving availability handler definitions above build_parser usage.
+
+Read cli.py
+
+Fixing NameError by moving availability command handlers above build_parser or forward-declaring them.
+
+cli.py+30-31
+Re-running availability CLI smoke test after fix.
+
+python -m studybuddy.cli add-availability --email alice@clemson.edu --day Mon --start 13:00 --end 15:00
+python -m studybuddy.cli add-availability --email alice@clemson.edu --day Mon --start 14:30 --end 16:00
+python -m studybuddy.cli list-availability --email alice@clemson.edu
+python -m studybuddy.cli remove-availability --email alice@clemson.edu --index 1
+
+GitHub Copilot
+
+Story 2 (availability management) implemented modularly with:
+
+New model: AvailabilitySlot (added to UserProfile).
+New service: availability_service.AvailabilityService (add, list, remove, merge overlapping slots).
+CLI commands: add-availability, list-availability, remove-availability.
+README updated with usage examples (other .md files untouched, no tests added per your request).
+Verified via CLI: adding, merging overlapping times, listing, removing.
+You’re set for your teammate to write tests and update sprint artifacts. Want to proceed to Story 3 (search/matching) next or pause here?
+
+going back to the second sprint we did just now. is there a way to make it so that we show all days of the current week? have it show whether there are any availabilities set on each day of that week if there are none then it will say and show none if there are some it will show under that day and what time in EST and it should show in normal time not army time.
+
+Reading current availability_service.py to integrate weekly view feature properly.
+
+Read availability_service.py
+
+Adding a weekly availability overview feature and CLI command to display all days with 12-hour EST times.
+
+Re-reading current cli.py to apply patch with correct context.
+
+Read cli.py
+
+Updating cli.py to add week-availability command and helper; updating availability_service for weekly overview; update README accordingly.
+
+availability_service.py
+cli.py
+README.md+5-0
+Fixing missing imports (Dict, Tuple) in availability_service.py and ensure CLI function ordering (add newline separation).
+
+availability_service.py+1-0
+Running CLI week-availability command to verify new feature works.
+
+python -m studybuddy.cli week-availability --email alice@clemson.edu
+
+Re-reading cli.py to locate issue causing build_parser not returning parser (missing return).
+
+Read cli.py
+
+Fixing build_parser to return parser and relocating cmd_week_availability before build_parser return.
+
+cli.py+2-2
+Re-running week-availability CLI command to confirm fix.
+
+python -m studybuddy.cli week-availability --email alice@clemson.edu
+python -m studybuddy.cli add-availability --email alice@clemson.edu --day Mon --start 09:00 --end 11:30
+python -m studybuddy.cli week-availability --email alice@clemson.edu
+
+GitHub Copilot
+
+Added weekly overview feature:
+
+availability_service.weekly_overview returns all days (MON–SUN) with 12‑hour formatted ranges.
+CLI command week-availability shows each day and either “None” or time ranges (e.g., 9:00 AM-11:30 AM).
+Fixed parser return bug and NameError issues.
+README updated with new command earlier; functionality verified via CLI (added a slot, displayed correctly).
+You now have:
+
+add-availability / list-availability / remove-availability
+week-availability (aggregated view, merged slots, 12h format)
+Let me know if you also want per-day filtering, timezone conversion, or exporting availability next.
+
+so i see that when the user gives back 9:00 or 11:30 how does it know that it is talking about AM or PM? have it so that it asks that too or something make it easy to implement unless it is already implemented
+
+Extending time parser to accept 12-hour AM/PM formats and updating CLI help and README.
+
+availability_service.py
+cli.py
+README.md+3-2
+Running a quick smoke test for new 12h time parsing.
+
+python -m studybuddy.cli add-availability --email alice@clemson.edu --day Tue --start 9am --end 11:30am
+python -m studybuddy.cli week-availability --email alice@clemson.edu
+
+GitHub Copilot
+
+Enhanced time handling:
+
+Added flexible parser: accepts 24h (13:00), 12h with am/pm (1pm, 1:30PM, 09:15am), or hour-only with am/pm (9am).
+CLI help text updated to reflect accepted formats.
+README updated (only README; other markdown untouched).
+Verified via CLI: added Tue 9am–11:30am, stored correctly, weekly view shows 9:00 AM-11:30 AM.
+How it decides AM/PM now:
+
+If you include am/pm suffix, it's interpreted as 12-hour time.
+If no suffix, it's treated as 24-hour time.
+Internally stored in 24h (HH:MM), displayed in 12h for week overview.
+Let me know if you also want: rejecting ambiguous times (like “12” without suffix), timezone conversion, or batch input parsing.
+
+for sprint 3 there are 2 stories. we want to follow the first story (story three) first off. add whatever needs to be added to implement story three. again add to the readme if needed and make it modular as well. dont make test cases since my teammate is doing that and dont edit any other .md file since he is also doing that as well.
+
+Implementing Story 3 by adding a search service and CLI command, then updating README usage.
+
+Read README.md
+
+search_service.py
+__init__.py
+cli.py
+README.md+14-0
+Performing a quick smoke test: create another user, add course and availability, then run search commands.
+
+python -m studybuddy.cli create-user --name "Bob Builder" --email bob@clemson.edu
+python -m studybuddy.cli add-course --email bob@clemson.edu --course CPSC3720
+python -m studybuddy.cli add-availability --email bob@clemson.edu --day Wed --start 2pm --end 4pm
+python -m studybuddy.cli search-classmates --email alice@clemson.edu --course CPSC3720
+python -m studybuddy.cli search-classmates-availability --email alice@clemson.edu --course CPSC3720
+
+GitHub Copilot
+
+Story 3 implemented (course-based classmate search + availability view):
+
+Added modular service: search_service.SearchService (classmates_in_course, classmates_with_availability).
+Integrated new CLI commands:
+search-classmates
+search-classmates-availability
+Updated __init__.py exports.
+README updated with usage examples (only README; other markdown untouched).
+Smoke tested end-to-end: created second user, added course and availability, verified both search commands output expected data.
+No tests added per your instruction; teammate can now cover:
+
+Normalization of course codes in search.
+Empty result handling.
+Availability inclusion formatting.
+Ready for the second Story of Sprint 3 (meeting proposal/confirmation) whenever you are. Let me know when to proceed.
+
+for showing available times of other students, it should also show the current students available time either side by side or above and see if times are compatible. if they are show that and show how long the study availability can last/be.
+
+Reading current search_service.py before adding overlap logic.
+
+Read search_service.py
+
+Reading availability_service for needed utilities to compute overlaps.
+
+Read availability_service.py, lines 1 to 140
+
+Read availability_service.py, lines 140 to 147
+
+Extending SearchService and CLI to show overlap between requester and each classmate with duration.
+
+search_service.py
+cli.py
+README.md+5-0
+Running smoke test for overlap command with existing users (Alice and Bob).
+
+python -m studybuddy.cli search-overlap --email alice@clemson.edu --course CPSC3720
+python -m studybuddy.cli add-availability --email alice@clemson.edu --day Wed --start 2:30pm --end 5pm
+python -m studybuddy.cli search-overlap --email alice@clemson.edu --course CPSC3720
+
+GitHub Copilot
+
+Added overlap feature for Story 3 enhancement:
+
+SearchService.overlap_with_classmates computes common availability windows (per day, merged) and total shared minutes.
+New CLI command: search-overlap Shows each classmate, total overlapping minutes, and detailed windows with duration (e.g., 2:30 PM-4:00 PM (90m)).
+README updated with overlap command.
+Smoke tested: when overlap exists (Alice Wed 2:30–5pm vs Bob Wed 2–4pm) it reports 90 minutes (2:30–4:00 PM). When none, shows “(No overlapping availability)”.
+Your teammate can add tests around:
+
+Multiple overlap segments same day
+No overlap case
+Sorting by total_minutes
+Edge boundaries (touching vs non-overlapping)
+Ready for meeting request / confirmation story when you are. Let me know to proceed.
+
+
+now, its time for us to do story 4 which is the last part for this project in sprint 3. again make it modular dont edit any other .md files other than readme if necessary. and dont make any tests. implement whatever we need to make story four work properly.
+
+Adding modular session (story 4) support: models, storage, service, CLI commands, and README update.
+
+session_models.py
+session_storage.py
+session_service.py
+__init__.py
+cli.py
+README.md+28-0
+Running smoke test to propose and accept a session.
+
+python -m studybuddy.cli propose-session --from alice@clemson.edu --to bob@clemson.edu --course CPSC3720 --day Wed --start 2:30pm --end 3:00pm --message "Quick sync"
+python -m studybuddy.cli list-requests --email bob@clemson.edu
+python -m studybuddy.cli respond-session --email bob@clemson.edu --id 1 --action accept
+python -m studybuddy.cli list-sessions --email alice@clemson.edu
+python -m studybuddy.cli list-sessions --email bob@clemson.edu
+
+GitHub Copilot
+
+Story 4 implemented (study session proposals & confirmations):
+
+Added modular components: session_models (StudySession), session_storage (JSON persistence), session_service (business logic with validation).
+New CLI commands:
+propose-session
+list-requests
+respond-session (accept/decline)
+list-sessions (confirmed)
+Validations: shared course, distinct users, window within both users’ availability, invitee-only response.
+README updated with usage examples.
+Smoke test: proposed, listed, accepted, and listed confirmed session (ID 1) for both users.
+Your teammate can create tests for:
+
+Invalid window (outside availability)
+Decline path
+Duplicate/course mismatch
+Self-invite rejection
+Let me know if you want any polish (e.g., cancel pending requests, update times, or exporting sessions).
