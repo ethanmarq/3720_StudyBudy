@@ -9,8 +9,8 @@ Blockers: None Yet
 
 Team Member: Michael 
 Last Stand Up's Work: User Stories in backlog.md, examples for Standup Logs
-Current Plan:
-Blockers:
+Current Plan: Implement Features from Story One into a command line enviroment.
+Blockers: None Yet
 
 
 ## Sprint Two
