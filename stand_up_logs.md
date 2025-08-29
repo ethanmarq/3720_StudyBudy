@@ -16,11 +16,11 @@ Blockers: None Yet
 ## Sprint Two
 Date: Aug 29 2025
 Team Member: Ethan
-Current Plan:
+Current Plan: Write test cases to make sure add-availabiilty list-availability and remove-availability work as expected
 Blockers: Structuring how to split up work in team.
 
 Team Member: Michael
-Current Plan:
+Current Plan: Write functionality for add-availability, list-avilability, and remove-avilability
 Blockers: Structuring how to split up work in team.
 
 
