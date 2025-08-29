@@ -36,16 +36,22 @@ TEMP_reflection_report.pdf
 
 ---
 
+## Universal Useful Commands
+Help:
+```
+python -m studybuddy.cli --help
+```
+
+Run tests:
+```
+python -m pytest -q
+```
+
 ## Running the Sprint 1 CLI (Profiles & Courses)
 
 Python 3.10+ recommended. No external dependencies.
 
 Commands:
-
-Help:
-```
-python -m studybuddy.cli --help
-```
 
 Create user:
 ```
@@ -63,11 +69,6 @@ python -m studybuddy.cli show-profile --email alice@clemson.edu
 ```
 
 Data is stored in `data/users.json`. Tests isolate storage via `STUDYBUDDY_DATA_PATH` env var.
-
-Run tests:
-```
-python -m pytest -q
-```
 
 Sprint 1 Scope Implemented:
 - Create profile with Clemson email validation
