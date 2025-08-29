@@ -1,42 +1,37 @@
 # Stand Up Logs
 
 ## Sprint One
-Date: 
-Team Member: 
-Yesterday's Work:
-Today's Plan:
-Blockers:
+Date: Aug 29 2025
+Team Member: Ethan
+Last Stand Up's Work: Format stand_up_logs.md, User Stories in backlog.md, Docs, Github, retrospective_log.md, format sprint_plans.md
+Current Plan: Plan out backlogs to divide them between three sprints. 
+Blockers: None Yet
 
-Team Member: 
-Yesterday's Work:
-Today's Plan:
+Team Member: Michael 
+Last Stand Up's Work: User Stories in backlog.md, examples for Standup Logs
+Current Plan:
 Blockers:
 
 
 ## Sprint Two
 Date: 
 Team Member: 
-Yesterday's Work:
-Today's Plan:
+Current Plan:
 Blockers:
 
 Team Member: 
-Yesterday's Work:
-Today's Plan:
+Current Plan:
 Blockers:
 
 
 ## Sprint Three
 Date: 
 Team Member: 
-Yesterday's Work:
-Today's Plan:
+Current Plan:
 Blockers:
 
-
 Team Member: 
-Yesterday's Work:
-Today's Plan:
+Current Plan:
 Blockers:
 
 

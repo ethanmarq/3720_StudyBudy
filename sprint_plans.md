@@ -18,6 +18,7 @@ Write and run tests for profile creation
 Sprint Goals:
 
 Stories:
+Story 2
 
 Tasks:
 
@@ -26,6 +27,7 @@ Tasks:
 Sprint Goals:
 
 Stories:
+Story 3, 4
 
 Tasks:
 
