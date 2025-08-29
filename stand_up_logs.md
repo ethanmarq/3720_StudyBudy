@@ -14,25 +14,25 @@ Blockers: None Yet
 
 
 ## Sprint Two
-Date: 
-Team Member: 
+Date: Aug 29 2025
+Team Member: Ethan
 Current Plan:
-Blockers:
+Blockers: Structuring how to split up work in team.
 
-Team Member: 
+Team Member: Michael
 Current Plan:
-Blockers:
+Blockers: Structuring how to split up work in team.
 
 
 ## Sprint Three
-Date: 
-Team Member: 
+Date: Aug 29 2025
+Team Member: Ethan
 Current Plan:
-Blockers:
+Blockers: None
 
-Team Member: 
+Team Member: Michael
 Current Plan:
-Blockers:
+Blockers: None
 
 
 
