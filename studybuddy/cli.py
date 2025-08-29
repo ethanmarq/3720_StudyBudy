@@ -6,6 +6,7 @@ from typing import Callable
 
 from .profile_service import ProfileService, ValidationError
 from .availability_service import AvailabilityService
+from .availability_service import DAY_ORDER as _DAY_ORDER
 
 
 def _handle_errors(func: Callable[[], int]) -> int:
@@ -89,11 +90,11 @@ def build_parser() -> argparse.ArgumentParser:
     c3.set_defaults(func=cmd_show_profile)
 
     # Availability commands (Story 2)
-    a1 = sub.add_parser("add-availability", help="Add availability slot: day start end")
+    a1 = sub.add_parser("add-availability", help="Add availability slot: day start end (start/end accept 09:00 or 9:00am)")
     a1.add_argument("--email", required=True)
     a1.add_argument("--day", required=True, help="Mon Tue Wed Thu Fri Sat Sun")
-    a1.add_argument("--start", required=True, help="Start time HH:MM 24h")
-    a1.add_argument("--end", required=True, help="End time HH:MM 24h")
+    a1.add_argument("--start", required=True, help="Start time (24h HH:MM or 12h like 9am / 1:30pm)")
+    a1.add_argument("--end", required=True, help="End time (24h HH:MM or 12h like 11am / 4:15pm)")
     a1.set_defaults(func=cmd_add_availability)
 
     a2 = sub.add_parser("list-availability", help="List availability slots with indices")
@@ -105,7 +106,23 @@ def build_parser() -> argparse.ArgumentParser:
     a3.add_argument("--index", type=int, required=True)
     a3.set_defaults(func=cmd_remove_availability)
 
+    a4 = sub.add_parser("week-availability", help="Show all days with availability (12h format)")
+    a4.add_argument("--email", required=True)
+    a4.set_defaults(func=cmd_week_availability)
     return p
+
+
+def cmd_week_availability(args) -> int:
+    svc = AvailabilityService()
+    overview = svc.weekly_overview(email=args.email)
+    print("Weekly Availability (EST):")
+    for day in _DAY_ORDER:
+        entries = overview.get(day, [])
+        if not entries:
+            print(f"{day}: None")
+        else:
+            print(f"{day}: {', '.join(f'{s}-{e}' for s, e in entries)}")
+    return 0
 
 
 def main(argv=None) -> int:

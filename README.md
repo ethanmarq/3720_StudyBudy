@@ -63,7 +63,7 @@ Sprint 1 Scope Implemented:
 
 Add availability slot:
 ```
-python -m studybuddy.cli add-availability --email alice@clemson.edu --day Mon --start 13:00 --end 15:00
+python -m studybuddy.cli add-availability --email alice@clemson.edu --day Mon --start 1:00pm --end 3:00pm
 ```
 
 List availability:
@@ -76,7 +76,13 @@ Remove a slot by index (see list output):
 python -m studybuddy.cli remove-availability --email alice@clemson.edu --index 1
 ```
 
+Show full week overview (12-hour EST):
+```
+python -m studybuddy.cli week-availability --email alice@clemson.edu
+```
+
 Notes:
 - Overlapping or adjacent slots on the same day are automatically merged.
-- Time format is 24h HH:MM. Days accepted: Mon Tue Wed Thu Fri Sat Sun.
+- Time input accepts either 24h (13:30) or 12h with am/pm (1:30pm, 9am). Internally stored in 24h; displayed in 12h in the week view.
+- Days accepted: Mon Tue Wed Thu Fri Sat Sun.
 

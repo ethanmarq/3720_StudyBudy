@@ -6,7 +6,18 @@
       "courses": [
         "CPSC 3720"
       ],
-      "availability": []
+      "availability": [
+        {
+          "day": "MON",
+          "start": "09:00",
+          "end": "11:30"
+        },
+        {
+          "day": "TUE",
+          "start": "09:00",
+          "end": "11:30"
+        }
+      ]
     }
   ]
 }
