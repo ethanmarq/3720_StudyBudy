@@ -26,13 +26,13 @@
 
 ### AI Transcript 
 marquez_ethan_ai_transcript.txt
-TEMP_michael_ai_transcript.txt
+ellis_michael_ai_transcript.txt
 
 ### AI Usage Report
-TEMP_useage_report.pdf
+3720_AI_usage_report.pdf
 
 ### Reflection Report
-TEMP_reflection_report.pdf
+3720_StudyBuddy_Reflection_Report.pdf
 
 ---
 
